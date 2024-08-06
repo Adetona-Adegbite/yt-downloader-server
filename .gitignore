@@ -1,0 +1,51 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pyd
+*.db
+*.sqlite3
+*.env
+
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# Flask
+instance/
+*.sqlite3
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Dependencies
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Pytest
+.cache/
+
+# Coverage
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+
+# MyPy
+.mypy_cache/
+.dmypy.json
