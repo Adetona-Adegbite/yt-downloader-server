@@ -7,7 +7,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-DOWNLOAD_FOLDER = '/home/site/wwwroot/downloads'
+DOWNLOAD_FOLDER = './downloads'
 if not os.path.exists(DOWNLOAD_FOLDER):
     os.makedirs(DOWNLOAD_FOLDER)
     print('folder created')
@@ -33,7 +33,7 @@ def video_downloader():
         filename = os.path.basename(file_path)
         return jsonify({'message': 'Download completed successfully.', 'file_path': filename,'thumbnail':yt.thumbnail_url,'title':yt.title})
     except Exception as e:
-        print("Error: "+e)
+        print(e)
         return jsonify({'error': str(e)}), 500
 
 
