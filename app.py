@@ -7,7 +7,9 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-DOWNLOAD_FOLDER = 'downloads'  # Ensure this folder exists
+DOWNLOAD_FOLDER = '/home/site/wwwroot/downloads'
+if not os.path.exists(DOWNLOAD_FOLDER):
+    os.makedirs(DOWNLOAD_FOLDER)
 if not os.path.exists(DOWNLOAD_FOLDER):
     os.makedirs(DOWNLOAD_FOLDER)
 
